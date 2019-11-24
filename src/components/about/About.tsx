@@ -1,50 +1,45 @@
-import React from "react";
-import { Card, Elevation, Callout, Button } from "@blueprintjs/core";
-import "./../App.css";
+import React from 'react';
+import './../App.css';
 
 const About: React.FC = () => {
   return (
-    <Card className="content-box" elevation={Elevation.ZERO}>
+    <div className="content-box">
+      <div className="content-heading">About</div>
       <p>Hi, my name is Tommy and I am a software engineer and a web developer.</p>
       <p>I'm proud to have worked with some awesome companies:</p>
 
       <div className="button-group">
-        <Button
-          className="button"
-          onClick={() => window.open("https://www.binarapps.com/")}
-          minimal
-        >
+        <div className="button" onClick={() => window.open('https://www.binarapps.com/')}>
           BINARAPPS
-        </Button>
-        <Button
-          className="button"
-          onClick={() => window.open("https://www.stratajet.com/")}
-          minimal
-        >
+        </div>
+        <div className="button" onClick={() => window.open('https://www.stratajet.com/')}>
           STRATAJET
-        </Button>
-        <Button className="button" onClick={() => window.open("https://www.gabi.com/")} minimal>
+        </div>
+        <div className="button" onClick={() => window.open('https://www.gabi.com/')}>
           GABI
-        </Button>
+        </div>
       </div>
       <div className="button-group">
-        <Button className="button" onClick={() => window.open("https://www.abb.com/")} minimal>
+        <div className="button" onClick={() => window.open('https://www.abb.com/')}>
           ABB
-        </Button>
-        <Button
-          className="button"
-          onClick={() => window.open("https://www.biotechnologia.pl/")}
-          minimal
-        >
+        </div>
+        <div className="button" onClick={() => window.open('https://www.biotechnologia.pl/')}>
           BIO-TECH MEDIA
-        </Button>
-        <Button className="button" onClick={() => window.open("http://www.lokoom.eu/")} minimal>
+        </div>
+        <div className="button" onClick={() => window.open('http://www.lokoom.eu/')}>
           LOKOOM
-        </Button>
+        </div>
       </div>
 
-      <Callout className="callout" title="Let's Work Together!" />
-    </Card>
+      <div className="content-heading">Contact</div>
+      <div className="contact card">
+        <p>tommybernaciak.com Tomasz Bernaciak</p>
+        <p>contact@tommybernaciak.com</p>
+        <p>
+          <a href="tel:+48666393797">+48 666 393 797</a>
+        </p>
+      </div>
+    </div>
   );
 };
 
