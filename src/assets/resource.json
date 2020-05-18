@@ -1,12 +1,16 @@
 {
   "en": {
     "translation": {
-      "about-button": "About"
+      "header": "Hello",
+      "about": "Hi, my name is Tommy and I am a software engineer and a web developer. Professional full stack developer with over 5 years of solid experience. Highly motivated, ambitious and creative person with can-do attitude. Very curious and hungry for knowledge, and like to take on challenging projects that will help me gain new skills and broaden my horizons.",
+      "contact-title": "Contact"
     }
   },
   "pl": {
     "translation": {
-      "about-button": "O mnie"
+      "header": "Cześć",
+      "about": "Nazywam się Tomasz Bernaciak i jestem programistą.",
+      "contact-title": "Kontakt"
     }
   }
 }
