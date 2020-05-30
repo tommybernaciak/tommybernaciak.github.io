@@ -1,29 +1,28 @@
-import React, { useState } from "react";
-import "./App.css";
-import { TopNavbar } from "./top-navbar";
-import { About } from "./about";
-import { Contact } from "./contact";
-import { PAGE } from "./../constants";
+import React, { useState } from 'react';
+import './App.css';
+import About from './About';
+import Header from './Header';
+import Social from './Social';
+import Contact from './Contact';
+import LanguageButton from './LanguageButton';
+import { initLang } from '../utils/i18next';
+
+export const green = '#2ab859';
+export const gray = '#bcbcbc';
+
+export interface IState {
+  lang: string;
+}
 
 const App: React.FC = () => {
-  const [page, setPage] = useState<PAGE>(PAGE.ABOUT);
-
-  const renderPage = () => {
-    switch (page) {
-      case PAGE.ABOUT: {
-        return <About />;
-      }
-      case PAGE.CONTACT: {
-        return <Contact />;
-      }
-    }
-  };
+  const [state, setState] = useState<IState>({ lang: initLang() });
   return (
-    <div className="App">
-      <div className="wrapper">
-        <TopNavbar setPage={setPage} />
-      </div>
-      <div className="wrapper">{renderPage()}</div>
+    <div className="main">
+      <LanguageButton language={state.lang} setState={setState} />
+      <Header />
+      <About />
+      <Contact />
+      <Social />
     </div>
   );
 };
