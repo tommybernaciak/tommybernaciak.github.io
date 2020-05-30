@@ -10,14 +10,3 @@ p {
   letter-spacing: normal;
   font-weight: normal;
 }
-
-@media screen and (min-width: 500px) {
-  .navbar-heading {
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 700px) {
-  .navbar-heading {
-    font-size: 4rem;
-  }
-}

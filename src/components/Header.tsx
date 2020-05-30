@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   title: {
     marginTop: '10vh',
     width: '100%',
@@ -15,6 +15,11 @@ const useStyles = makeStyles(() => ({
     marginBottom: '2rem',
     paddingLeft: '5rem',
     paddingRight: '5rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '3rem',
+      paddingLeft: '2rem',
+      paddingRight: '2rem',
+    },
   },
 }));
 
