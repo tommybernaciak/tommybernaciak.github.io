@@ -3,67 +3,58 @@ import { Typography, makeStyles } from '@material-ui/core';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-const useStyles = makeStyles((theme) => ({
-  about: {
+const useStyles = makeStyles(() => ({
+  main: {
     width: '100%',
-    fontSize: '2rem',
+    paddingLeft: '10rem',
+    paddingRight: '10rem',
+  },
+  about: {
+    fontSize: '1.5rem',
     fontWeight: 'bold',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
     lineHeight: '2rem',
-    letterSpacing: 'normal',
     marginBottom: '2rem',
-    paddingLeft: '5rem',
-    paddingRight: '5rem',
-    minHeight: '12rem',
+    minHeight: '8rem',
+  },
+  stackTitle: {
+    fontSize: '1rem',
+    marginBottom: '1rem',
+  },
+  stack: {
+    fontSize: '1rem',
+    marginBottom: '0.5rem',
+  },
+  more: {
+    fontSize: '1rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+    minHeight: '3rem',
   },
 }));
 
 const About: React.FC = () => {
   const classes = useStyles({});
   const { t }: { t: i18next.TFunction } = useTranslation();
+  const FRONTEND = 'React, AngularJS, Angular, JavaScript, Typescript';
+  const BACKEND = 'Ruby, Ruby on Rails';
+  const STYLE = 'HTML5, CSS3, Flexbox, Bootstrap, Material-UI';
+  const DB = 'SQL, MySQL, PostgreSQL';
+  const DEPLOY = 'AWS, Heroku, Jenkins';
 
   return (
     <>
-      <Typography className={classes.about}>{t('about')}</Typography>
-      <Typography>
-        Here are my expertise listed below. • React, AngularJS, Angular, JavaScript, Typescript •
-        Ruby, Ruby on Rails • HTML5, CSS3, Flexbox, Bootstrap, Material-UI • D3.js, Recharts,
-        Chart.js • SQL, MySQL, PostgreSQL • AWS, Heroku, Jenkins I am open and curious, always
-        striving to be better than the day before. I enjoy my work. I am proud of what I built and I
-        appreciate a good laugh. If you are looking for a developer who is honest, activated and
-        writes clean code - please contact me, I am glad to help you!
+      <Typography className={`${classes.main} ${classes.about}`}>{t('about')}</Typography>
+      <Typography className={`${classes.main} ${classes.stackTitle}`}>
+        {t('stack-title')}
       </Typography>
+      <Typography className={`${classes.main} ${classes.stack}`}>{FRONTEND}</Typography>
+      <Typography className={`${classes.main} ${classes.stack}`}>{BACKEND}</Typography>
+      <Typography className={`${classes.main} ${classes.stack}`}>{STYLE}</Typography>
+      <Typography className={`${classes.main} ${classes.stack}`}>{DB}</Typography>
+      <Typography className={`${classes.main} ${classes.stack}`}>{DEPLOY}</Typography>
+      <Typography className={`${classes.main} ${classes.more}`}>{t('more')}</Typography>
     </>
   );
 };
 
 export default About;
-
-// <div className="content-box">
-//   <div className="content-heading">About</div>
-//   <p>Hi, my name is Tommy and I am a software engineer and a web developer.</p>
-//   <p>I'm proud to have worked with some awesome companies:</p>
-
-//   <div className="button-group">
-//     <div className="button" onClick={() => window.open('https://www.binarapps.com/')}>
-//       BINARAPPS
-//     </div>
-//     <div className="button" onClick={() => window.open('https://www.stratajet.com/')}>
-//       STRATAJET
-//     </div>
-//     <div className="button" onClick={() => window.open('https://www.gabi.com/')}>
-//       GABI
-//     </div>
-//   </div>
-//   <div className="button-group">
-//     <div className="button" onClick={() => window.open('https://www.abb.com/')}>
-//       ABB
-//     </div>
-//     <div className="button" onClick={() => window.open('https://www.biotechnologia.pl/')}>
-//       BIO-TECH MEDIA
-//     </div>
-//     <div className="button" onClick={() => window.open('http://www.lokoom.eu/')}>
-//       LOKOOM
-//     </div>
-//   </div>

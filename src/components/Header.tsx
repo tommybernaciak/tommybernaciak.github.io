@@ -4,16 +4,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   title: {
     marginTop: '10vh',
     width: '100%',
     fontSize: '7rem',
     fontWeight: 'bold',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
     lineHeight: '8rem',
-    letterSpacing: 'normal',
     color: '#fff',
     marginBottom: '2rem',
     paddingLeft: '5rem',

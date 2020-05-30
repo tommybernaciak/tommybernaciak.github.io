@@ -7,6 +7,9 @@ import Contact from './Contact';
 import LanguageButton from './LanguageButton';
 import { initLang } from '../utils/i18next';
 
+export const green = '#2ab859';
+export const gray = '#bcbcbc';
+
 export interface IState {
   lang: string;
 }
@@ -18,8 +21,8 @@ const App: React.FC = () => {
       <LanguageButton language={state.lang} setState={setState} />
       <Header />
       <About />
-      <Social />
       <Contact />
+      <Social />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { Button } from '@material-ui/core';
 import { changeLang } from '../utils/i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import { IState } from './App';
+import { green, gray } from './App';
 
 interface IProps {
   language: string;
@@ -12,10 +13,10 @@ interface IProps {
 
 const useStyles = makeStyles(() => ({
   button: {
-    color: '#bcbcbc',
+    color: gray,
   },
   buttonSelected: {
-    color: '#2ab859',
+    color: green,
   },
 }));
 

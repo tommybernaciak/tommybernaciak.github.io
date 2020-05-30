@@ -3,6 +3,14 @@
   text-align: center;
   background-color: #000000;
 }
+
+p {
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  font-weight: normal;
+}
+
 @media screen and (min-width: 500px) {
   .navbar-heading {
     font-size: 3rem;
