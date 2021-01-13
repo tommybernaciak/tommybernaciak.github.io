@@ -1,11 +1,10 @@
-import React, { memo } from 'react';
-import './App.css';
 import { Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import React, { memo } from 'react';
 import { green } from './App';
+import './App.css';
 
 const useStyles = makeStyles((theme) => ({
   social: {
@@ -30,7 +29,6 @@ const Social: React.FC = () => {
 
   const social = [
     { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/tommybernaciak' },
-    { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/tommybernaciak' },
     { name: 'LinkedIn', icon: LinkedInIcon, url: 'https://www.linkedin.com/in/tommy-bernaciak/' },
   ];
   return (

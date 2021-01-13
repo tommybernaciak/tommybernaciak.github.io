@@ -1,12 +1,12 @@
-import React from 'react';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import i18next from 'i18next';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles((theme) => ({
   title: {
-    marginTop: '10vh',
+    marginTop: '7vh',
     width: '100%',
     fontSize: '7rem',
     fontWeight: 'bold',
